@@ -1,0 +1,31 @@
+# .gitignore
+
+# Entorno virtual
+venv/
+
+# Archivos de la base de datos local de Django
+db.sqlite3
+
+# Archivos de Python
+*.pyc
+__pycache__/
+myproject/__pycache__/
+items/__pycache__/
+users/__pycache__/
+file_manager/__pycache__/
+
+# Archivos de configuración sensibles
+.env
+.idea/ # Directorio de proyectos de PyCharm/IntelliJ
+
+# Archivos de sistema
+.DS_Store
+
+# Archivos de Logs y Media
+*.log
+media/
+
+# Archivos de Docker y Azure que podrían ser generados
+.vscode/
+.dockerignore
+azure-pipelines.yml
