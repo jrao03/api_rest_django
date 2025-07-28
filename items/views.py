@@ -27,8 +27,12 @@ def get_item(request):
     paginator = StandardResultsSetPagination()
     pagina = paginator.paginate_queryset(items, request)
 
+    # Si no hay elementos en la página (pagina es None), devuelve una respuesta vacía
+    if pagina is None:
+        return paginator.get_paginated_response([])
+
     serializer = ItemSerializer(pagina, many=True)
-    return Response(serializer.data, status=200)
+    return paginator.get_paginated_response(serializer.data)
 
 @api_view(['post'])
 @permission_classes([IsAuthenticated])
