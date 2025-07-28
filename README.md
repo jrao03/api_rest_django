@@ -1,4 +1,4 @@
-# 🛒 API de Supermercado + Extractor de Archivos (PDF/Excel/CSV)
+# 🛒 API Backend para la gestión de productos de supermercado
 
 Este proyecto es una API construida con Django REST Framework. Incluye autenticación JWT, manejo de usuarios, un CRUD de productos de supermercado y un sistema para extraer datos automáticamente de archivos (`.pdf`, `.csv`, `.xlsx`).
 
@@ -8,7 +8,7 @@ Este proyecto es una API construida con Django REST Framework. Incluye autentica
 
 - Login y autenticación con JWT
 - CRUD de objetos de supermercado
-- Extracción de pares clave-valor automáticamente de archivos PDF/CSV/Excel(e.g., `CURP: XXXXX`, `RFC: YYYYY`)
+- Extracción de pares clave-valor automáticamente de archivos PDF/Excel (e.g., CURP, RFC). **El cliente web implementado no incluye la funcionalidad de carga de archivos, pero el endpoint en la API está completamente funcional.**
 - Gestión de usuarios (ver y modificar perfil)
 - Desplegable vía Docker en Azure App Service
 - Uso de base de datos PostgreSQL
@@ -108,6 +108,20 @@ DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
 DATABASE_URL=postgres://usuario:clave@localhost:5432/tu_db
 ```
+
+## 🌐 Entregables y Acceso Público
+Puedes probar la API y el cliente directamente en las siguientes URL:
+
+URL de la API (Azure App Service): https://api-xdev-ehgndacxg4hkdzfw.eastus-01.azurewebsites.net
+
+URL de la aplicación cliente (GitPages): https://jrao03.github.io/front_api/
+
+Para acceder a las rutas protegidas, puedes usar este usuario de prueba:
+
+Correo: generico@correo.com
+
+Contraseña: password1
+`
 
 ## 🧠 Autor
 💻 José Ángel Robles Otero 
